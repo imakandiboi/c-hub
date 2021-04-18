@@ -31,5 +31,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.slide {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  height: 210px;
+  justify-content: center;
+}
 </style>
