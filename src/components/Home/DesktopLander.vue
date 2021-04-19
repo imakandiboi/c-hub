@@ -1,12 +1,32 @@
 <template>
   <div>
-    <agile class="main" :autoplay="true" :autoplay-speed="3000" :dots="true">
+    <agile
+      :dots="true"
+      :fade="true"
+      class="main relative"
+      :autoplay="true"
+      :autoplay-speed="3000"
+      @after-change="(e) => (currentSlide = e.currentSlide)"
+    >
       <div
-        class="slide bg-gray-900"
+        class="slide bg-gray-900 relative"
         v-for="(slide, index) in slides"
         :key="index"
       >
-        <img :src="slides" alt="image" width="1900px" />
+        <img :src="slide" alt="image" width="1940px" />
+      </div>
+
+      <div
+        class="absolute top-20 text-gray-100 w-full py-40 px-20"
+        slot="caption"
+      >
+        <div class="w-full h-20 text-center align-center">
+          <div class="grid grid-cols-2 gap-x-4">
+            <h2 class="caption">
+              {{ captions[currentSlide] }}
+            </h2>
+          </div>
+        </div>
       </div>
     </agile>
   </div>
@@ -21,12 +41,22 @@ export default {
   },
   data() {
     return {
+      currentSlide: 0,
+      captions: [
+        "This is the first slide ",
+        "Home Of Quality Laptops ",
+        "This is the third slide",
+        "This is the foyrth slide",
+        "This is the fifth slide",
+        "This is the sixth slide",
+        "This is the seventh slide",
+      ],
       slides: [
-        "https://images.unsplash.com/photo-1453831362806-3d5577f014a4?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+        "https://images.samsung.com/is/image/samsung/assets/africa_en/03_Smartphones_A32_PF_Header_5G_KV_PC_1440x640.jpg?$ORIGIN_JPG$",
         "https://media.idownloadblog.com/wp-content/uploads/2020/11/MacBook-Pro-M1-processor.jpg",
         "https://www.pslivegame.com/images/pzen_slideshow/PS5-banner_1614148675.png",
-        "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
-        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
+        "https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-background-block-desktop-01-en-11jun20?$4000px$",
+        "https://gmedia.playstation.com/is/image/SIEPDC/ps5-entertainment-page-banner-hero-desktop-01-en-12nov20?$2400px--t$",
         "https://images.unsplash.com/photo-1472926373053-51b220987527?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
         "https://www8.hp.com/content/dam/sites/worldwide/homepage/images/banners/us/US-premium-laptops-desktop.jpg",
       ],
@@ -95,5 +125,10 @@ export default {
 .main >>> .agile__nav-button--next {
   right: 0;
   border-radius: 8px 0px 0px 8px;
+}
+
+.caption {
+  font-size: 30px;
+  font-weight: 300;
 }
 </style>
