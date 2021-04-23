@@ -4,22 +4,26 @@
       <Header />
       <Navbar />
     </header>
-    <main class="">
+    <main class="bg-gray-100">
       <router-view></router-view>
     </main>
-    <footer></footer>
+    <footer>
+      <Footer />
+    </footer>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
 import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Header,
     Navbar,
+    Footer,
   },
 };
 </script>

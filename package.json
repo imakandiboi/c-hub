@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "postcss css/tailwind.css -o public/build/tailwind.css",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "gsap": "^3.6.1",
     "vue": "^2.6.11",
@@ -41,7 +42,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": [
     "> 1%",

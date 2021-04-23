@@ -3,7 +3,7 @@
     <agile
       :dots="true"
       :fade="true"
-      class="main relative"
+      class="main relative top-32"
       :autoplay="true"
       :autoplay-speed="9000"
       @after-change="(e) => (currentSlide = e.currentSlide)"
@@ -69,10 +69,8 @@ export default {
       ],
       slides: [
         "https://gmedia.playstation.com/is/image/SIEPDC/ps5-entertainment-page-banner-hero-desktop-01-en-12nov20?$2400px--t$",
-
         "https://media.idownloadblog.com/wp-content/uploads/2020/11/MacBook-Pro-M1-processor.jpg",
         "https://images.samsung.com/is/image/samsung/assets/africa_en/03_Smartphones_A32_PF_Header_5G_KV_PC_1440x640.jpg?$ORIGIN_JPG$",
-
         "https://www.pslivegame.com/images/pzen_slideshow/PS5-banner_1614148675.png",
         "https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-background-block-desktop-01-en-11jun20?$4000px$",
         "https://images.unsplash.com/photo-1472926373053-51b220987527?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
@@ -81,8 +79,17 @@ export default {
     };
   },
   mounted: function () {
-    gsap.to(".caption1", { x: 50, ease: "bounce.in", duration: 9 });
-    gsap.to(".caption2", { x: 50, ease: "fade.in", duration: 9 });
+    gsap.to(".caption1", {
+      x: 50,
+      ease: "bounce.in",
+      duration: 4,
+    });
+    gsap.to(".caption2", {
+      x: 50,
+      ease: "bounce.in",
+      duration: 4,
+      delay: 6,
+    });
   },
 };
 </script>
@@ -154,7 +161,7 @@ export default {
   font-weight: 500;
 }
 .caption h4 {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 200;
 }
 </style>
