@@ -23,21 +23,28 @@
         </h3>
       </router-link>
 
-      <h3
-        class="w-32 h-12 text-center justify-center py-2 hover:text-green-500 px-2"
-      >
-        smartphone
-      </h3>
-      <h3
-        class="w-32 h-12 text-center justify-center py-2 hover:text-green-500 px-2"
-      >
-        console
-      </h3>
-      <h3
-        class="w-32 h-12 text-center justify-center py-2 hover:text-green-500 px-2"
-      >
-        accersories
-      </h3>
+      <router-link :to="{ name: 'SmartPhones' }">
+        <h3
+          class="w-32 h-12 text-center justify-center py-2 hover:text-green-500 px-2"
+        >
+          smartphone
+        </h3>
+      </router-link>
+
+      <router-link :to="{ name: 'Consoles' }">
+        <h3
+          class="w-32 h-12 text-center justify-center py-2 hover:text-green-500 px-2"
+        >
+          console
+        </h3>
+      </router-link>
+      <router-link :to="{ name: 'Games' }">
+        <h3
+          class="w-32 h-12 text-center justify-center py-2 hover:text-green-500 px-2"
+        >
+          games
+        </h3>
+      </router-link>
     </div>
   </div>
 </template>

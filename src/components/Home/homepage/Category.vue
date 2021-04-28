@@ -20,9 +20,9 @@
       </div>
       <div class="grid grid-rows-3 grid-flow-col gap-8 m-4">
         <router-link
-          :to="{ name: 'Home' }"
-          v-for="(category, index) in categories"
-          :key="index"
+          :to="{ name: `/${category.name}`, params: { id: category.id } }"
+          v-for="category in categories"
+          :key="category.name"
           class="shadow-md transition duration-500 transform hover:bg-gray-50 hover:scale-110"
         >
           <div class="bg-white w-auto h-auto rounded-sm shadow-inner">
@@ -49,9 +49,26 @@
 </template>
 
 <script>
+import store from "@/store";
+
 export default {
   props: { categories: Array },
+
   name: "Category",
+  data() {
+    return {
+      CurrentCategory: this.$route.params.id,
+      getCategory: store.categories,
+    };
+  },
+  methods: {},
+  computed: {
+    getCurrentCategory() {
+      return store.categories.find(
+        (category) => category.id === this.CurrentCategory
+      );
+    },
+  },
 };
 </script>
 

@@ -5,7 +5,7 @@
       <Navbar />
     </header>
     <main class="bg-gray-100">
-      <router-view></router-view>
+      <router-view key="$route.slug"></router-view>
     </main>
     <footer>
       <Footer />
