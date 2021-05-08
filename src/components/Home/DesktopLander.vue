@@ -79,16 +79,16 @@ export default {
     };
   },
   mounted: function () {
-    gsap.to(".caption1", {
-      x: 50,
-      ease: "bounce.in",
-      duration: 4,
+    gsap.from(".caption1", {
+      y: 70,
+      ease: "bounce",
+      duration: 2,
     });
-    gsap.to(".caption2", {
-      x: 50,
-      ease: "bounce.in",
-      duration: 4,
-      delay: 6,
+    gsap.from(".caption2", {
+      y: 20,
+      duration: 2,
+      ease: "bounce",
+      delay: 0.5,
     });
   },
 };

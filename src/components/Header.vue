@@ -13,13 +13,10 @@
       </div>
     </div>
     <div
-      class="w-full shadow-xl fixed h-24 bg-gray-700 p-4 flex block gap-x-2 block lg:hidden"
+      class="w-full shadow-xl fixed h-auto bg-gray-900 p-4 flex block gap-x-2 block lg:hidden"
     >
       <div class="w-2/3">
         <h2 class="text-xl justify-items-start text-gray-200 z-50">C-Hub</h2>
-        <p class="text-sm font-small text-green-500 uppercase">
-          phones | accersories | gadgets
-        </p>
       </div>
       <div class="w-1/3 p-2">navbutton</div>
     </div>
