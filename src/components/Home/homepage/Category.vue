@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-32 px-16 w-auto h-full top-48">
+  <div class="pt-4 px-16 w-auto h-full top-48">
     <div class="lg:py-16 px-12">
       <div class="flex">
         <div class="flex items-center w-full h-48 p-4 flex-col w-full gap-y-2">

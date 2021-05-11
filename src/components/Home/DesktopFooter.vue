@@ -1,6 +1,8 @@
 <template>
   <div>
-    <footer class="w-full p-8 relative h-1/3 bg-gray-900">
+    <footer
+      class="w-full p-8 relative h-1/3 bg-gray-900 border-t-8 border-green-600"
+    >
       <div class="m-4 gap-8 flex text-gray-100 block justify-around">
         <div class="w-1/3 p-2 h-96">
           <div class="flex flex-col mx-2 gap-y-4">
@@ -16,16 +18,16 @@
           </div>
         </div>
         <div class="w-2/3 h-96 p-4">
-          <div class="grid grid-cols-3 gap-4 text-center justify-items-center">
+          <div class="grid grid-cols-3 gap-4 text-left justify-items-center">
             <div class="grid grid-rows-3">
               <p
                 class="w-64 h-16 p-2 mb-4 font-sans font-bold capitalize text-gray-100"
               >
                 About
               </p>
-              <p class="w-64 h-16 p-2">2</p>
-              <p class="w-64 h-16 p-2">2</p>
-              <p class="w-64 h-16 p-2">2</p>
+              <p class="w-64 h-16 p-2">Nigeria</p>
+              <p class="w-64 h-16 p-2">United States</p>
+              <p class="w-64 h-16 p-2">United Kingdom</p>
             </div>
             <div class="grid grid-rows-3">
               <p
@@ -33,9 +35,9 @@
               >
                 Contact Address
               </p>
-              <p class="w-64 h-16 p-2">2</p>
-              <p class="w-64 h-16 p-2">2</p>
-              <p class="w-64 h-16 p-2">2</p>
+              <p class="w-64 h-16 p-2">Email</p>
+              <p class="w-64 h-16 p-2">Phone</p>
+              <p class="w-64 h-16 p-2">Address</p>
             </div>
             <div class="grid grid-rows-3">
               <p
@@ -43,9 +45,9 @@
               >
                 Affiliates
               </p>
-              <p class="w-64 h-16 p-2">2</p>
-              <p class="w-64 h-16 p-2">2</p>
-              <p class="w-64 h-16 p-2">2</p>
+              <p class="w-64 h-16 p-2">Blog</p>
+              <p class="w-64 h-16 p-2">Developers</p>
+              <p class="w-64 h-16 p-2">Team</p>
             </div>
           </div>
         </div>

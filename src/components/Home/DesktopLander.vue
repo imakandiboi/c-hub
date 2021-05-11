@@ -3,7 +3,7 @@
     <agile
       :dots="true"
       :fade="true"
-      class="main relative top-32"
+      class="main relative"
       :autoplay="true"
       :autoplay-speed="9000"
       @after-change="(e) => (currentSlide = e.currentSlide)"

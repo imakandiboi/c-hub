@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="py-4 w-full bg-gray-900 lg:block hidden fixed z-50">
+    <div class="py-4 w-full bg-gray-900 lg:block hidden z-50">
       <div class="mx-24 py-2">
         <div class="justify-around justify-items-start w-full py-2">
           <h1 class="text-4xl justify-items-start text-gray-200">
