@@ -1,14 +1,22 @@
 <template>
   <div>
-    <Laptopcomponent />
+    <Laptopdesktop :laptops="GetLaptops" />
+    <laptopmobile />
   </div>
 </template>
 
 <script>
-import Laptopcomponent from "@/components/Laptops/Laptopcomponent.vue";
+import { mapGetters } from "vuex";
+
+import Laptopdesktop from "@/components/Laptops/Laptopdesktop.vue";
+import Laptopmobile from "@/components/Laptops/Laptopmobile.vue";
 export default {
   components: {
-    Laptopcomponent,
+    Laptopdesktop,
+    Laptopmobile,
+  },
+  computed: {
+    ...mapGetters("laptops", ["GetLaptops"]),
   },
 };
 </script>
